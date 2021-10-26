@@ -1,0 +1,59 @@
+.online-form {
+  background-color: $form-bg;
+}
+
+.online-form__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 42px, 49px, 0.05em, none);
+  color: $white-color;
+
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 44px;
+}
+
+.form-field__input {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $secondary-light-color;
+
+  width: 100%;
+  height: 24px;
+  background-color: transparent;
+  border-bottom: 1px solid $secondary-light-color;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 44px;
+  }
+
+  &:focus,
+  &:focus::placeholder {
+    color: $white-color;
+    border-color: $white-color;
+  }
+}
+
+.form-field__comment {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $secondary-light-color;
+  cursor: pointer;
+
+  width: 100%;
+  height: 76px;
+  background-color: transparent;
+  border-bottom: 1px solid $secondary-light-color;
+
+  margin-bottom: 44px;
+
+  &:focus,
+  &:focus::placeholder {
+    color: $white-color;
+    border-color: $white-color;
+  }
+}

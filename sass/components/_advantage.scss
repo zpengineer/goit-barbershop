@@ -1,0 +1,78 @@
+.advantage__subtitle {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $title-text-color;
+
+  display: flex;
+  align-items: center;
+  max-width: 410px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $title-text-color;
+  }
+}
+
+.advantage__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 42px, 49px, 0.05em, none);
+  color: $title-text-color;
+
+  display: block;
+  max-width: 418px;
+  margin-bottom: 20px;
+}
+
+.advantage__paragraph {
+  @include fontStyle(400, 18px, 30px, 0.02em, none);
+  color: $primary-text-color;
+
+  margin-bottom: 44px;
+}
+
+.advantage-list {
+  @extend %lists;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.advantage-list__item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
+
+  width: 193px;
+  height: 133px;
+  padding: 20px 32px;
+  text-align: center;
+  background-color: $advantage-bg;
+
+  &:nth-child(2n) {
+    align-self: auto;
+  }
+}
+
+.advantage-list__count {
+  display: flex;
+  justify-content: center;
+
+  @include fontStyle(700, 42px, 57px, 0.05em, none);
+  color: $title-text-color;
+
+  &::after {
+    content: '+';
+    @include fontStyle(600, 16px, 22px, 0, none);
+    color: $brand-color;
+  }
+}
+
+.advantage-list__text {
+  @include fontStyle(600, 11px, 15px, 0, none);
+  color: $title-text-color;
+}

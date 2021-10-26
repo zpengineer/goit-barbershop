@@ -1,0 +1,98 @@
+.masters {
+  background-color: $advantage-bg;
+}
+
+.masters__subtitle {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $title-text-color;
+
+  display: flex;
+  align-items: center;
+  max-width: 410px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $title-text-color;
+  }
+}
+
+.masters__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 42px, 49px, 0.05em, none);
+  color: $title-text-color;
+
+  margin-bottom: 44px;
+}
+
+.masters-cards,
+.masters-social {
+  @extend %lists;
+}
+
+.masters-cards__item {
+  &:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
+
+.masters-cards__img {
+  margin-bottom: 30px;
+}
+
+.masters-cards__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.masters-cards__title {
+  @include fontStyle(400, 18px, 25px, 0.02em, none);
+  color: $title-text-color;
+
+  margin-bottom: 8px;
+}
+
+.masters-cards__text {
+  @include fontStyle(400, 14px, 19px, 0.02em, none);
+  color: $brand-color;
+
+  margin-bottom: 30px;
+}
+
+.masters-social {
+  display: flex;
+}
+
+.masters-social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $white-color;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  fill: $title-text-color;
+
+  &:hover,
+  &:focus {
+    fill: $brand-color;
+  }
+}
+
+// .masters-social__icon {
+
+// }

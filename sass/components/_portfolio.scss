@@ -1,0 +1,32 @@
+.portfolio__subtitle {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $title-text-color;
+
+  display: flex;
+  align-items: center;
+  max-width: 410px;
+  margin-bottom: 44px;
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $title-text-color;
+  }
+}
+
+.portfolio__title {
+  @extend %visually-hidden;
+}
+
+.portfolio-cards {
+  @extend %lists;
+}
+
+.portfolio-cards__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

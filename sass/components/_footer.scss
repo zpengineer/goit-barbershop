@@ -1,0 +1,42 @@
+.footer {
+  padding: 44px 0;
+  background-color: $advantage-bg;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-copy {
+  @include fontStyle(600, 11px, 15px, 0.2em, none);
+  color: $accent-color;
+
+  order: 2;
+}
+
+.footer-list {
+  @extend %lists;
+
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  &::before {
+    @include pseudoLine($title-text-color);
+    margin-right: 40px;
+  }
+}
+
+.footer-list__link {
+  @include fontStyle(600, 11px, 15px, 0.2em, none);
+  color: $title-text-color;
+}
+
+.footer-list__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}

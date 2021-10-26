@@ -1,0 +1,71 @@
+.contacts {
+  background-color: $form-bg;
+  background-image: url('../img/bg/contacts-bg.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url('../img/bg/contacts-bg@2x.png');
+  }
+}
+
+.contacts__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 42px, 49px, 0.05em, none);
+  color: $white-color;
+
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.contacts-list {
+  @extend %lists;
+  margin-bottom: 44px;
+}
+
+.contacts-list__link {
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+  @include fontStyle(400, 18px, 30px, 0.02em, none);
+  color: $accent-color;
+}
+
+.contacts-list__link--decor {
+  text-decoration: underline;
+}
+
+.contacts-list__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts-list__icon {
+  margin-right: 16px;
+
+  fill: white;
+}
+
+.contacts-time-title {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $white-color;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &::before {
+    @include pseudoLine($secondary-light-color);
+  }
+}
+
+.contacts-time-work {
+  @include fontStyle(400, 18px, 30px, 0.02em, none);
+  color: $accent-color;
+}

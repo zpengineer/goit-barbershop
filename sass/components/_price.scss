@@ -1,0 +1,80 @@
+.price {
+  background-color: $section-bg-color;
+  background-image: url('../img/bg/section-bg.png');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url('../img/bg/section-bg@2x.png');
+  }
+}
+
+.price__subtitle {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $light-text-color;
+
+  display: flex;
+  align-items: center;
+  max-width: 410px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $light-text-color;
+  }
+}
+
+.price__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 42px, 49px, 0.05em, none);
+  color: $white-color;
+
+  margin-bottom: 44px;
+}
+
+.price-list {
+  @extend %lists;
+}
+
+.price-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+    height: 1px;
+    flex-grow: 1;
+    background-color: $light-color;
+  }
+}
+
+.price-list__text,
+.price-list__cost {
+  @include fontStyle(400, 14px, 30px, 0.02em, none);
+  color: $accent-color;
+}
+
+.price-list__text {
+  order: -1;
+}
+
+.price-wrapper {
+  padding: 30px;
+  margin-bottom: 50px;
+
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}

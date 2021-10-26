@@ -1,0 +1,52 @@
+@mixin centeredFlex($type: flex, $justify: center, $aling: center) {
+  display: $type;
+  justify-content: $justify;
+  align-items: $aling;
+}
+
+@mixin alingCards($variable, $value) {
+  flex-basis: calc(100% / #{$variable} - #{$value});
+
+  margin-left: $value;
+  margin-top: $value;
+}
+
+@mixin negativeMargin($value: 30px) {
+  margin-left: -1 * $value;
+  margin-top: -1 * $value;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ' ') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin fontStyle($weight, $size, $height, $spacing, $transform: none) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height / $size;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+@mixin animation($properties: 'All') {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: $properties;
+}
+
+@mixin adaptiv-font-m($maxSize, $minSize) {
+  $addSize: $maxSize - $minSize;
+  $maxWidth: 1200 - 320;
+  font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / 1200));
+}
+
+@mixin pseudoLine($color) {
+  content: '';
+  display: inline-flex;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: $color;
+}

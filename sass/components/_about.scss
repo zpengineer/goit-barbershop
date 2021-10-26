@@ -1,0 +1,38 @@
+.about__subtitle {
+  @include fontStyle(600, 11px, 15px, 0.1em, uppercase);
+  color: $title-text-color;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $title-text-color;
+  }
+}
+
+.about__title {
+  font-family: 'Raleway', sans-serif;
+  @include fontStyle(700, 28px, 33px, 0.05em, none);
+  color: $title-text-color;
+
+  max-width: 303px;
+  margin-bottom: 20px;
+}
+
+.about__paragraph {
+  @include fontStyle(400, 16px, 26px, 0.02em, none);
+
+  margin-bottom: 20px;
+}
+
+.about__description {
+  @include fontStyle(400, 14px, 26px, 0.02em, none);
+
+  margin-bottom: 40px;
+}
